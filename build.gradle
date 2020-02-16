@@ -3,9 +3,10 @@
 buildscript {
   repositories {
     jcenter()
+    google()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.3.0'
+    classpath 'com.android.tools.build:gradle:3.5.3'
     classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
 
     // NOTE: Do not place your application dependencies here; they belong
@@ -16,6 +17,7 @@ buildscript {
 allprojects {
   repositories {
     jcenter()
+    google()
     maven { url 'https://jitpack.io' }
   }
 }
@@ -26,7 +28,7 @@ task clean(type: Delete) {
 
 ext {
   // Sdk and tools
-  build_tools_version = "26.0.2"
+  build_tools_version = "28.0.3"
   compile_sdk_version = 26
   min_sdk_version = 14
   target_sdk_version = 26
