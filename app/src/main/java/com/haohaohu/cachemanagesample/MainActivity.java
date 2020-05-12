@@ -374,14 +374,13 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         CacheUtil.init(cc);//初始化，必须调用
         KeyGenerator xd;
-        // DES is not supported
-//        try {
-//            xd = KeyGenerator.getInstance("DES");
-//            String str = xd.generateKey().toString();
-//            Log.e("str", str);
-//        } catch (NoSuchAlgorithmException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            xd = KeyGenerator.getInstance("DES");
+            String str = xd.generateKey().toString();
+            Log.e("str", str);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
 
         try {
             KeyStore keyStore = KeyStore.getInstance("AndroidKeyStore");
